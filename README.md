@@ -41,13 +41,20 @@ The Dortania Post-Install guide demonstrates how to install OpenCore to the boot
 
 ### Add kexts and ssdt patches
 Copy the EFI folder on your Installation key on the EFI of your 
-Add the following kext in **/EFI/kexts/Other**
+Add the following kext in **/EFI/OC/Kexts**
 - Lilu.kext (https://github.com/acidanthera/Lilu)
 - AppleALC.kext (https://github.com/acidanthera/AppleALC)
 - IntelMausi.kext (https://github.com/acidanthera/IntelMausi)
 - WhateverGreen.kext (https://github.com/acidanthera/WhateverGreen)
 - VirtualSMC.kext (https://github.com/acidanthera/VirtualSMC)
 - USBInjectAll.kext (https://github.com/RehabMan/OS-X-USB-Inject-All)
+- IntelBluetoothFirmware.kext (https://github.com/OpenIntelWireless/IntelBluetoothFirmware)
+- IntelBluetoothInjector.kext (https://github.com/OpenIntelWireless/IntelBluetoothFirmware - optional, adds BT to the system settings)
+- NVMeFix.kext (https://github.com/acidanthera/NVMeFix)
+- SMCProcessor.kext (https://github.com/acidanthera/VirtualSMC)
+- SMCSuperIO.kext (https://github.com/acidanthera/VirtualSMC)
+
+Post-install USBMap can be used to map the actual USB ports on the system, one is included in this repo
 
 The Dortania install guide details how to create SSDT patches.
 The following patches were needed on the EliteDesk 800 G5
